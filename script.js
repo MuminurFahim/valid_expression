@@ -5,11 +5,12 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
     if (!p) {
         p = document.createElement('p');
-        p.setAttribute('id', 'p');    
+        p.setAttribute('id', 'p');
     }
 
     if (index == 0) {
-        p.innerHTML = '<p style="color:blue">Please select an option before entering an input.</p>';
+        p.setAttribute('style', 'color:blue');
+        p.innerHTML = 'Please select an option before entering an input.';
     } else {
         const regex = [
                 /^([a-zA-Z0-9].?)+[^.]@([a-zA-Z0-9].?)+[^.]$/,
@@ -19,13 +20,14 @@ document.getElementById('form').addEventListener('submit', (e) => {
             text = input.value;
 
         if (regex[index - 1].test(text)) {
-            p.innerHTML = `<p style="color:green">'${text}' is a <b>valid</b> ${option[index - 1]}.</p>`;
+            p.setAttribute('style', 'color:green');
+            p.innerHTML = `'${text}' is a <b>valid</b> ${option[index - 1]}.`;
         } else {
-            p.innerHTML = `<p style="color:red">'${text}' is <b>not a valid</b> ${option[index - 1]}.</p>`;
+            p.setAttribute('style', 'color:red');
+            p.innerHTML = `'${text}' is <b>not a valid</b> ${option[index - 1]}.`;
         }
     }
 
     document.body.appendChild(p);
-    // input.value = '';
     e.preventDefault();
 })
