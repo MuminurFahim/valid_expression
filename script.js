@@ -13,7 +13,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
         p.innerHTML = 'Please select an option before entering an input.';
     } else {
         const regex = [
-                /^([a-zA-Z0-9].?)+[^.]@([a-zA-Z0-9].?)+[^.]$/,
+                /^([0-9a-zA-Z]([-\.\+\_\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/,
                 /^[1-9][0-9]{3}$/,
                 /^(\+)?(88)?01[0-9]{9}$/],
             option = ['Email', 'Postcode', 'Mobile Number'],
