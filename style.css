@@ -1,0 +1,11 @@
+body {
+    font-size: large;
+    text-align: center;
+    background-color: azure;
+}
+
+input,
+select {
+    font-size: large;
+    background-color: lightseagreen;
+}
