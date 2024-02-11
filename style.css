@@ -8,4 +8,5 @@ input,
 select {
     font-size: large;
     background-color: lightseagreen;
+    margin: 0.1em;
 }
